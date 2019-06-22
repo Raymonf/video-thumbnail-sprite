@@ -267,7 +267,10 @@ class ThumbnailSprite
         $tempDir->addPlugin(new ListFiles);
 
         // get basic info about video
-        $ffprobe  = FFProbe::create()->format($this->getSource());
+        $ffprobe  = FFProbe::create([
+            'ffmpeg.binaries'  => exec('which ffmpeg'),
+            'ffprobe.binaries' => exec('which ffprobe')
+        ])->format($this->getSource());
         $duration = (float)$ffprobe->get('duration');
 
         // check if sample rate is high enough to reach desired minimum amount of thumbnails

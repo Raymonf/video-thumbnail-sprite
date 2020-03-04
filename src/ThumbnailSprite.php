@@ -320,7 +320,7 @@ class ThumbnailSprite
             $spriteFile
         );
 
-        $proc = new Process($cmd);
+        $proc = Process::fromShellCommandline($cmd);
         $proc->run();
 
         if (!$proc->isSuccessful()) {

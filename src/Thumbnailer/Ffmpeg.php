@@ -22,7 +22,7 @@ class Ffmpeg extends Thumbnailer
             $num
         );
 
-        $proc = new Process($cmd);
+        $proc = Process::fromShellCommandline($cmd);
         $proc->setTimeout(null);
         $proc->run();
 

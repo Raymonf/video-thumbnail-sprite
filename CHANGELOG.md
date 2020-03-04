@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.0.~] - 2020-03-04
+
+### Changed
+
+- Update for new symfony/process v5 changes (https://github.com/symfony/symfony/blob/master/UPGRADE-5.0.md#process)
+- Change the required PHP version to allow anything equal to or above 7.x
+
+### Changed
+
+- Cleanup composer.json (remove test entry)
+- Be more relaxed with php-ffmpeg version constraint (allow recent versions)
+
 ## [1.0.3] - 2018-04-20
 
 ### Changed
